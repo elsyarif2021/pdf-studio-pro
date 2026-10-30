@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">PDF Studio Pro</string>
+    <string name="app_tagline">Smart &amp; Elegant Document Workspace</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_documents">Documents</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="hero_title">Your Documents, Simplified</string>
+    <string name="hero_subtitle">Read, scan and organize everything in one place offline and securely.</string>
+    <string name="action_scan_now">Scan Now</string>
+    <string name="action_open_pdf">Open PDF</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="recent_documents">Recent Documents</string>
+    <string name="no_recent_docs">No documents yet</string>
+    <string name="no_recent_docs_desc">Open or scan a new PDF document to begin your workspace.</string>
+
+    <!-- Tools -->
+    <string name="tool_scan">Scan Document</string>
+    <string name="tool_ocr">OCR Text</string>
+    <string name="tool_merge">Merge PDF</string>
+    <string name="tool_split">Split PDF</string>
+    <string name="tool_compress">Compress PDF</string>
+    <string name="tool_img_to_pdf">Image to PDF</string>
+    <string name="tool_pdf_to_img">PDF to Image</string>
+    <string name="tool_rotate">Rotate Pages</string>
+    <string name="tool_delete_pages">Delete Pages</string>
+    <string name="tool_watermark">Watermark</string>
+    <string name="tool_extract">Extract Pages</string>
+
+    <!-- Reader -->
+    <string name="reader_title">PDF Viewer</string>
+    <string name="reader_page_indicator">Page %1$d of %2$d</string>
+    <string name="reader_jump_to_page">Jump to page</string>
+    <string name="reader_bookmarks">Bookmarks</string>
+    <string name="reader_add_bookmark">Add Bookmark</string>
+    <string name="reader_print">Print</string>
+    <string name="reader_share">Share</string>
+    <string name="reader_vertical_mode">Vertical Scroll</string>
+    <string name="reader_horizontal_mode">Page Flip Mode</string>
+    <string name="reader_night_mode">Dark Mode</string>
+
+    <!-- Scanner -->
+    <string name="scanner_title">Scan Document</string>
+    <string name="scanner_capture">Capture</string>
+    <string name="scanner_gallery">Pick from Gallery</string>
+    <string name="scanner_pages_count">%1$d pages captured</string>
+    <string name="scanner_crop_title">Adjust Corners</string>
+    <string name="scanner_filter_original">Original</string>
+    <string name="scanner_filter_magic">Magic Color</string>
+    <string name="scanner_filter_bw">B&amp;W</string>
+    <string name="scanner_filter_grayscale">Grayscale</string>
+    <string name="scanner_save_pdf">Save PDF</string>
+    <string name="camera_permission_required">Camera Permission Required</string>
+    <string name="camera_permission_desc">PDF Studio Pro needs camera access to scan your physical documents directly into PDF format.</string>
+    <string name="grant_permission">Grant Permission</string>
+
+    <!-- OCR -->
+    <string name="ocr_title">OCR Text Recognizer</string>
+    <string name="ocr_recognize_btn">Extract Text</string>
+    <string name="ocr_processing">Recognizing text...</string>
+    <string name="ocr_copy">Copy Text</string>
+    <string name="ocr_copied">Text copied to clipboard</string>
+    <string name="ocr_save_txt">Save TXT File</string>
+
+    <!-- Common -->
+    <string name="search_hint">Search documents...</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="details">Details</string>
+    <string name="favorite">Favorite</string>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="all_tab">All</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="scanned_tab">Scanned</string>
+    <string name="success_saved">Document saved successfully</string>
+    <string name="success_created">Created successfully</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Appearance &amp; Theme</string>
+    <string name="settings_storage">Storage &amp; Cache</string>
+    <string name="settings_clear_cache">Clear Temporary Cache</string>
+    <string name="settings_about">About PDF Studio Pro</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_offline_notice">100% On-Device Offline Processing</string>
+    <string name="settings_version">Version 1.0.0 (Build 1)</string>
+</resources>

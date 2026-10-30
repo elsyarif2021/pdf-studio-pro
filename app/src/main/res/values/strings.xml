@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">PDF Studio Pro</string>
+    <string name="app_tagline">Ruang Kerja Dokumen Cerdas &amp; Elegan</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_documents">Dokumen</string>
+    <string name="nav_scan">Pindai</string>
+    <string name="nav_tools">Alat</string>
+    <string name="nav_settings">Pengaturan</string>
+
+    <!-- Dashboard -->
+    <string name="hero_title">Dokumen Anda, Lebih Sederhana</string>
+    <string name="hero_subtitle">Baca, pindai, dan kelola semua file PDF secara offline dan aman.</string>
+    <string name="action_scan_now">Pindai Sekarang</string>
+    <string name="action_open_pdf">Buka PDF</string>
+    <string name="quick_actions">Aksi Cepat</string>
+    <string name="recent_documents">Dokumen Terbaru</string>
+    <string name="no_recent_docs">Belum ada dokumen</string>
+    <string name="no_recent_docs_desc">Buka atau pindai dokumen PDF baru untuk memulai pekerjaan Anda.</string>
+
+    <!-- Tools -->
+    <string name="tool_scan">Pindai Dokumen</string>
+    <string name="tool_ocr">OCR Teks</string>
+    <string name="tool_merge">Gabung PDF</string>
+    <string name="tool_split">Pisah PDF</string>
+    <string name="tool_compress">Kompres PDF</string>
+    <string name="tool_img_to_pdf">Gambar ke PDF</string>
+    <string name="tool_pdf_to_img">PDF ke Gambar</string>
+    <string name="tool_rotate">Putar Halaman</string>
+    <string name="tool_delete_pages">Hapus Halaman</string>
+    <string name="tool_watermark">Watermark</string>
+    <string name="tool_extract">Ekstrak Halaman</string>
+
+    <!-- Reader -->
+    <string name="reader_title">Penampil PDF</string>
+    <string name="reader_page_indicator">Halaman %1$d dari %2$d</string>
+    <string name="reader_jump_to_page">Lompat ke halaman</string>
+    <string name="reader_bookmarks">Penanda</string>
+    <string name="reader_add_bookmark">Tambah Penanda</string>
+    <string name="reader_print">Cetak</string>
+    <string name="reader_share">Bagikan</string>
+    <string name="reader_vertical_mode">Gulir Vertikal</string>
+    <string name="reader_horizontal_mode">Mode Lembaran</string>
+    <string name="reader_night_mode">Mode Malam</string>
+
+    <!-- Scanner -->
+    <string name="scanner_title">Pindai Dokumen</string>
+    <string name="scanner_capture">Ambil Gambar</string>
+    <string name="scanner_gallery">Pilih dari Galeri</string>
+    <string name="scanner_pages_count">%1$d halaman diambil</string>
+    <string name="scanner_crop_title">Sesuaikan Sudut</string>
+    <string name="scanner_filter_original">Asli</string>
+    <string name="scanner_filter_magic">Magic Color</string>
+    <string name="scanner_filter_bw">Hitam Putih</string>
+    <string name="scanner_filter_grayscale">Grayscale</string>
+    <string name="scanner_save_pdf">Simpan PDF</string>
+    <string name="camera_permission_required">Izin Kamera Diperlukan</string>
+    <string name="camera_permission_desc">PDF Studio Pro membutuhkan izin kamera untuk memindai dokumen fisik Anda langsung ke format PDF.</string>
+    <string name="grant_permission">Berikan Izin</string>
+
+    <!-- OCR -->
+    <string name="ocr_title">OCR Pengenal Teks</string>
+    <string name="ocr_recognize_btn">Ekstrak Teks</string>
+    <string name="ocr_processing">Sedang membaca teks...</string>
+    <string name="ocr_copy">Salin Teks</string>
+    <string name="ocr_copied">Teks berhasil disalin ke papan klip</string>
+    <string name="ocr_save_txt">Simpan File TXT</string>
+
+    <!-- Common -->
+    <string name="search_hint">Cari dokumen...</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="cancel">Batal</string>
+    <string name="save">Simpan</string>
+    <string name="delete">Hapus</string>
+    <string name="rename">Ganti Nama</string>
+    <string name="details">Detail</string>
+    <string name="favorite">Favorit</string>
+    <string name="unfavorite">Hapus Favorit</string>
+    <string name="all_tab">Semua</string>
+    <string name="favorites_tab">Favorit</string>
+    <string name="scanned_tab">Hasil Pindai</string>
+    <string name="success_saved">Dokumen berhasil disimpan</string>
+    <string name="success_created">Berhasil dibuat</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_appearance">Tampilan &amp; Tema</string>
+    <string name="settings_storage">Penyimpanan &amp; Cache</string>
+    <string name="settings_clear_cache">Bersihkan Cache Sementara</string>
+    <string name="settings_about">Tentang PDF Studio Pro</string>
+    <string name="settings_privacy">Kebijakan Privasi</string>
+    <string name="settings_offline_notice">Pemrosesan 100% Offline di Perangkat</string>
+    <string name="settings_version">Versi 1.0.0 (Build 1)</string>
+</resources>

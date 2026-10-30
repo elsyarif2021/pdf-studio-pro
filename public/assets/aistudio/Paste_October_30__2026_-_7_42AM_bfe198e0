@@ -1,0 +1,1198 @@
+# MASTER PROMPT: PDF STUDIO PRO
+# FULL ANDROID NATIVE APPLICATION IMPLEMENTATION
+# EDITION: PREMIUM NAVY BLUE & TEAL
+# OUTPUT: COMPLETE ANDROID STUDIO PROJECT + APK BUILD GUIDE
+
+ROLE:
+You are a Principal Android Software Engineer, Senior Kotlin Developer, Jetpack Compose Expert, Android UI/UX Designer, Mobile Software Architect, Security Engineer, and QA Automation Engineer.
+
+MISSION:
+Design and implement a complete, modern, elegant, fully responsive Android application called "PDF Studio Pro".
+
+The application combines:
+1. Professional PDF Reader
+2. Smart Document Scanner
+3. OCR Text Recognition
+4. PDF Editing and Conversion Tools
+5. Document File Manager
+6. Offline-first Document Workspace
+
+Produce REAL, COMPILABLE Android code, not merely screenshots, UI mockups, conceptual code, or pseudocode.
+
+The application must be ready to open in Android Studio and must support building a debug APK and a properly signed release APK/AAB.
+
+Do not claim a successful build unless compilation actually succeeds.
+
+==================================================
+A. PRODUCT INFORMATION
+==================================================
+
+Application Name:
+PDF Studio Pro
+
+Application ID:
+com.pdfstudiopro.app
+
+Platform:
+Android Native
+
+Language:
+Kotlin
+
+UI Framework:
+Jetpack Compose + Material Design 3
+
+Architecture:
+Clean Architecture + MVVM
+
+Application Category:
+Productivity / Documents
+
+Default Language:
+Bahasa Indonesia
+
+Secondary Language:
+English
+
+Processing:
+Offline-first
+
+Business Model:
+Free core features; no payments, advertisements, or subscriptions in the initial release.
+
+Product Principles:
+- Privacy first
+- Modern design
+- Fast performance
+- Professional user experience
+- Functional features
+- Minimal permissions
+- Accessibility
+- Maintainable architecture
+
+==================================================
+B. VISUAL DESIGN SPECIFICATION
+==================================================
+
+[DESKRIPSI VISUAL UTAMA]
+
+Jenis Desain:
+Premium Android mobile productivity application.
+
+Tema:
+"PDF Studio Pro — Elegant Document Workspace"
+
+Color palette:
+Primary Navy: #0B1F33
+Navy Surface: #142B45
+Secondary Navy: #203A56
+Premium Teal: #14B8A6
+Bright Teal: #2DD4BF
+Teal Soft: #CCFBF1
+Royal Blue: #2563EB
+Light Background: #F6F9FC
+Light Surface: #FFFFFF
+Dark Background: #081624
+Dark Surface: #12263B
+Primary Text Light: #10243A
+Secondary Text Light: #64748B
+Primary Text Dark: #F8FAFC
+Border Light: #E2E8F0
+Success: #16A34A
+Warning: #F59E0B
+Error: #DC2626
+
+Character style:
+No human characters. Use abstract document illustrations and minimalist iconography.
+
+Illustration style:
+Premium flat vector, modern productivity aesthetics, subtle gradients, soft shadow, glass-inspired decorative highlights without sacrificing readability.
+
+Font style:
+Modern sans-serif typography, using a licensed Android-compatible font such as Inter or an appropriate system fallback.
+
+Layout:
+Material Design 3, responsive card layouts, adaptive navigation, clean dashboard.
+
+Icon elements:
+Document, folder, PDF, scanner, camera, OCR, convert, merge, split, compress, watermark, share, print, bookmark, shield, settings.
+
+Border elements:
+1dp subtle outlines, rounded rectangles, elegant dividers.
+
+Texture:
+Smooth clean surfaces, no noisy textures.
+
+Background style:
+Layered navy hero panels, white or dark surfaces, minimal teal gradient accents.
+
+Text effect:
+Clean typography with clear hierarchy and accessible contrast.
+
+Icon set:
+Material Symbols or consistent vector icons.
+
+Mood:
+Elegant, premium, professional, secure, efficient.
+
+Rasio:
+Adaptive layouts for Android portrait and landscape screens.
+
+==================================================
+C. DESIGN SYSTEM
+==================================================
+
+Create reusable design tokens.
+
+Corner radius:
+- Small: 8dp
+- Medium: 12dp
+- Large: 18dp
+- Extra Large: 24dp
+- Hero Card: 28dp
+
+Spacing:
+4dp, 8dp, 12dp, 16dp, 20dp, 24dp, 32dp.
+
+Typography:
+DisplayLarge
+HeadlineLarge
+HeadlineMedium
+TitleLarge
+TitleMedium
+BodyLarge
+BodyMedium
+LabelMedium
+LabelSmall
+
+Use Material 3 type scale with readable text.
+
+Animations:
+- Navigation transition
+- Card entrance
+- Animated progress
+- Floating Action Button interaction
+- Scanner capture feedback
+- Tool processing indicators
+- Expand/collapse transitions
+- Snackbar feedback
+
+Animations must be subtle and honor reduced-motion accessibility settings where appropriate.
+
+Touch targets:
+At least 48dp for primary interactive elements.
+
+Accessibility:
+- TalkBack descriptions
+- Logical focus traversal
+- Readable font scaling
+- High contrast
+- Non-color status indicators
+- Keyboard navigation where applicable
+
+==================================================
+D. ANDROID TECHNOLOGY STACK
+==================================================
+
+Required:
+- Kotlin
+- Jetpack Compose
+- Material Design 3
+- Navigation Compose
+- AndroidX Lifecycle
+- ViewModel
+- StateFlow
+- Coroutines
+- Hilt Dependency Injection
+- Room Database
+- DataStore Preferences
+- CameraX
+- Android PdfRenderer
+- ML Kit Text Recognition
+- WorkManager
+- Android Storage Access Framework
+- MediaStore when appropriate
+- Android Print Framework
+- Gradle Kotlin DSL
+- Kotlin Serialization where appropriate
+
+Optional:
+- OpenCV for document corner detection
+- PDFBox-Android or another Android-compatible PDF processing engine
+- Image processing utilities
+- Coil for image thumbnails
+
+Before implementation:
+1. Verify actual stable versions and compatibility.
+2. Verify licenses and distribution obligations.
+3. Check minSdk, compileSdk and targetSdk requirements.
+4. Explain APIs not supported natively.
+5. Choose feasible implementations.
+
+IMPORTANT:
+Android PdfRenderer is for rendering PDF pages and is not a complete PDF editing or text extraction engine.
+
+Do not implement PDF text search, encryption, annotation, merging, or complex editing by pretending PdfRenderer supports them.
+
+Use an appropriate compatible PDF library or independently implemented processing module.
+
+Do not silently introduce commercial dependencies.
+
+==================================================
+E. PROJECT ARCHITECTURE
+==================================================
+
+Use Clean Architecture.
+
+PRESENTATION:
+Compose Screens
+ViewModels
+UiState
+UiEvent
+Navigation
+
+DOMAIN:
+Models
+Repository Interfaces
+Use Cases
+Business Rules
+
+DATA:
+Repository Implementations
+Room DAO
+Room Entities
+PDF Data Source
+Camera Data Source
+OCR Data Source
+File Storage Data Source
+
+DEPENDENCY INJECTION:
+Hilt Modules
+
+BACKGROUND:
+WorkManager
+
+ERROR MANAGEMENT:
+Use typed results with meaningful error messages.
+
+STATE MANAGEMENT:
+Use immutable UiState with StateFlow.
+
+Expose only stable observable data to Compose.
+
+Avoid placing business logic directly in Composable functions.
+
+==================================================
+F. PROJECT STRUCTURE
+==================================================
+
+Create this structure, adjusting module boundaries only when justified:
+
+PDFStudioPro/
+|
+|-- settings.gradle.kts
+|-- build.gradle.kts
+|-- gradle.properties
+|-- gradlew
+|-- gradlew.bat
+|-- gradle/wrapper/
+|
+|-- app/
+|   |-- build.gradle.kts
+|   |-- src/main/
+|       |-- AndroidManifest.xml
+|       |-- java/com/pdfstudiopro/app/
+|           |
+|           |-- PdfStudioApplication.kt
+|           |-- MainActivity.kt
+|           |
+|           |-- core/
+|           |   |-- designsystem/
+|           |   |   |-- Color.kt
+|           |   |   |-- Theme.kt
+|           |   |   |-- Type.kt
+|           |   |   |-- Dimensions.kt
+|           |   |   |-- Components.kt
+|           |   |
+|           |   |-- navigation/
+|           |   |-- common/
+|           |   |-- extensions/
+|           |   |-- security/
+|           |   |-- storage/
+|           |
+|           |-- data/
+|           |   |-- local/
+|           |   |   |-- AppDatabase.kt
+|           |   |   |-- dao/
+|           |   |   |-- entity/
+|           |   |   |-- migration/
+|           |   |
+|           |   |-- repository/
+|           |   |-- pdf/
+|           |   |-- scanner/
+|           |   |-- ocr/
+|           |
+|           |-- domain/
+|           |   |-- model/
+|           |   |-- repository/
+|           |   |-- usecase/
+|           |
+|           |-- feature/
+|           |   |-- splash/
+|           |   |-- onboarding/
+|           |   |-- home/
+|           |   |-- documents/
+|           |   |-- reader/
+|           |   |-- scanner/
+|           |   |-- ocr/
+|           |   |-- tools/
+|           |   |   |-- merge/
+|           |   |   |-- split/
+|           |   |   |-- compress/
+|           |   |   |-- convert/
+|           |   |   |-- rotate/
+|           |   |   |-- watermark/
+|           |   |   |-- protect/
+|           |   |
+|           |   |-- settings/
+|           |
+|           |-- worker/
+|           |-- di/
+|           |
+|       |-- res/
+|           |-- drawable/
+|           |-- mipmap/
+|           |-- values/
+|           |-- values-en/
+|           |-- xml/
+|
+|-- README.md
+|-- PRIVACY.md
+|-- LICENSES.md
+
+Create a complete project with valid imports, Gradle configurations, themes, dependencies, and resources.
+
+==================================================
+G. NAVIGATION SYSTEM
+==================================================
+
+Primary navigation:
+1. Home
+2. Documents
+3. Scan
+4. Tools
+5. Settings
+
+Use:
+- Bottom Navigation Bar on compact phone screens
+- Navigation Rail on medium screens
+- Navigation Drawer or adaptive pane on large tablets
+
+The Scan tab can launch the scanner flow.
+
+Navigation must:
+- Preserve state
+- Avoid duplicate destinations
+- Support system back
+- Handle process recreation
+- Restore scroll positions when appropriate
+- Prevent accidental data loss
+
+Provide safe confirmation for destructive actions.
+
+==================================================
+H. ALL APPLICATION SCREENS
+==================================================
+
+Implement every listed screen as a functional Compose screen.
+
+01. Splash Screen
+02. Onboarding Welcome
+03. Onboarding Features
+04. Onboarding Privacy
+05. Home Dashboard
+06. All Documents
+07. Recent Documents
+08. Favorite Documents
+09. Document Collections
+10. Document Search
+11. Document Detail
+12. PDF Reader
+13. PDF Page Navigation
+14. PDF Bookmarks
+15. PDF Search
+16. PDF Password Input
+17. Scanner Camera
+18. Scan Crop Editor
+19. Scan Filter Editor
+20. Multi-page Scan Preview
+21. Save Scanned PDF
+22. OCR Capture
+23. OCR Processing
+24. OCR Text Editor
+25. PDF Tools Dashboard
+26. Merge PDF
+27. Split PDF
+28. Compress PDF
+29. Image to PDF
+30. PDF to Images
+31. Rotate Pages
+32. Delete Pages
+33. Reorder Pages
+34. Extract Pages
+35. Add Watermark
+36. Protect PDF
+37. Unlock PDF
+38. Processing Status
+39. Export Result
+40. Settings
+41. Storage Preferences
+42. Appearance Settings
+43. About Application
+44. Privacy Information
+45. Error / Empty State
+
+Screens may share components and processing flows.
+
+Do not create a separate screen where a well-designed bottom sheet is better.
+
+==================================================
+I. HOME DASHBOARD
+==================================================
+
+Create a premium dashboard.
+
+TOP APP BAR:
+- PDF Studio Pro wordmark
+- Search action
+- Settings action
+
+HERO CARD:
+Navy blue gradient with teal highlights.
+
+Text:
+"Your Documents, Simplified"
+
+Subtitle:
+"Read, scan and organize everything in one place."
+
+Buttons:
+- Scan Now
+- Open PDF
+
+QUICK ACTIONS:
+- Scan
+- Merge
+- Split
+- Compress
+- OCR
+- Convert
+
+RECENT DOCUMENTS:
+Show most recently opened files.
+
+Each file card:
+- PDF thumbnail
+- Filename
+- File size
+- Page count
+- Last opened time
+- Favorite action
+- Overflow menu
+
+BOTTOM NAVIGATION:
+Home | Documents | Scan | Tools | Settings
+
+Use shimmer/skeleton loading if useful.
+
+Include empty state:
+"No documents yet"
+with a real Open PDF action.
+
+==================================================
+J. PDF READER MODULE
+==================================================
+
+Implement a professional reader.
+
+CORE:
+- Open PDF with SAF
+- Open external PDF via ACTION_VIEW
+- Display PDF pages
+- Continuous vertical scroll
+- Horizontal page mode
+- Pinch zoom
+- Double-tap zoom
+- Fit width
+- Fit page
+- Current page indicator
+- Jump to page
+- Save last read position
+- Bookmarks
+- Share PDF
+- Print PDF
+- Full-screen mode
+- Dark reader appearance
+- Screen rotation support
+
+ENGINE:
+Use PdfRenderer for compatible basic rendering.
+
+Add:
+- Background rendering
+- Page virtualization
+- Bitmap caching
+- Proper renderer lifecycle
+- Safe descriptor handling
+- Memory usage limits
+- Cancellation of obsolete page jobs
+
+Search within PDF:
+Implement only with a valid text extraction engine.
+
+Text highlighting/selection:
+Implement with an engine providing actual character positioning or describe the feature as unavailable.
+
+Password PDF:
+Support only through a compatible engine with verified encryption support.
+
+Handle:
+- Corrupt PDF
+- Unsupported PDF
+- Missing file
+- Permission revoked
+- Password required
+- Very large PDF
+- Out-of-memory risk
+
+==================================================
+K. DOCUMENT SCANNER MODULE
+==================================================
+
+Use CameraX.
+
+Camera capabilities:
+- Camera preview
+- Capture
+- Flash
+- Camera switching if supported
+- Gallery import
+- Permission handling
+
+Scanner processing:
+- Edge detection
+- Perspective correction
+- Manual crop
+- Auto crop when confident
+- Rotation
+- Brightness
+- Contrast
+- Grayscale
+- Black and white
+- Color enhancement
+- Multi-page capture
+- Page reorder
+- Delete page
+- Preview
+- Export to PDF
+
+Provide draggable document corner handles.
+
+Preview changes before committing.
+
+Preserve original scan data until user saves or discards.
+
+If automatic detection fails, immediately allow manual crop.
+
+Never export distorted or partially clipped pages without user confirmation.
+
+Optimize images for readable PDFs and sensible file sizes.
+
+==================================================
+L. OCR MODULE
+==================================================
+
+Implement on-device OCR.
+
+Features:
+- OCR on captured image
+- OCR on imported image
+- OCR on scanned pages
+- Multi-page processing
+- Extract and display text
+- Copy text
+- Edit result
+- Share result
+- Save TXT
+- Search recognized content
+
+Use ML Kit Text Recognition.
+
+Support Latin-script text for Indonesian and English where appropriate.
+
+If the selected ML Kit variant requires first-use model download, inform the user and handle the download gracefully.
+
+Do not silently upload private documents.
+
+SEARCHABLE PDF:
+If included, create actual invisible text layers positioned over scanned images using a capable PDF writing engine.
+
+Do not substitute a plain image-only PDF and label it searchable.
+
+==================================================
+M. PDF TOOLS MODULE
+==================================================
+
+Implement functional tools.
+
+1. MERGE PDF
+- Select multiple PDFs
+- Reorder
+- Merge
+- Save output
+- Share output
+
+2. SPLIT PDF
+- Choose file
+- Select page ranges
+- Preview pages
+- Save resulting PDF files
+
+3. COMPRESS PDF
+- Select file
+- Choose quality
+- Display original size
+- Process
+- Display final size
+- Explain if size cannot be reduced
+
+4. IMAGE TO PDF
+- Select images
+- Reorder
+- Choose A4/Letter/Auto sizing
+- Set margins
+- Generate PDF
+
+5. PDF TO IMAGE
+- Select pages
+- Select PNG/JPEG
+- Choose resolution
+- Export images
+
+6. ROTATE PDF
+- Rotate individual pages
+- Rotate page selection
+- Save result
+
+7. DELETE PAGES
+- Thumbnail selector
+- Multi-select pages
+- Delete with confirmation
+- Save new PDF
+
+8. REORDER PAGES
+- Page thumbnails
+- Drag and drop
+- Preview new order
+- Save result
+
+9. EXTRACT PAGES
+- Select target pages
+- Export separate PDF
+
+10. WATERMARK
+- Text watermark
+- Opacity
+- Rotation
+- Position
+- Font size
+- Apply selected pages
+
+11. PROTECT PDF
+- Password input
+- Password confirmation
+- Valid PDF encryption
+- Export protected file
+
+12. UNLOCK PDF
+- User supplies valid password
+- Decrypt authorized document using supporting engine
+- Save unprotected copy
+
+13. RENAME AND SHARE
+- File rename
+- Share using FileProvider or suitable content URI
+
+14. PRINT PDF
+- Android Print Framework
+
+Each tool must have real processing logic.
+
+Use compatible licensed libraries.
+
+Document any feature that cannot be implemented with available dependencies.
+
+==================================================
+N. DOCUMENT MANAGER
+==================================================
+
+Document features:
+- All documents
+- Recent documents
+- Favorites
+- Scanned documents
+- Collections
+- Search
+- Sort
+- Grid/list switch
+- Multi-select
+- File details
+- Rename
+- Delete
+- Share
+- Move
+- Duplicate
+
+Support SAF document and tree URI workflows.
+
+Do not rely on unrestricted legacy file path access.
+
+Document records store URIs and metadata.
+
+Before operations:
+- Validate URI access
+- Validate write permission
+- Handle read-only provider
+- Handle missing documents
+
+Use confirmation dialogs for destructive operations.
+
+Keep database consistent with filesystem results.
+
+==================================================
+O. ROOM DATABASE
+==================================================
+
+Create entities:
+
+DocumentEntity:
+id: Long
+uri: String
+displayName: String
+mimeType: String
+size: Long
+pageCount: Int?
+createdAt: Long
+modifiedAt: Long
+lastOpenedAt: Long?
+lastReadPage: Int
+isFavorite: Boolean
+collectionId: Long?
+
+BookmarkEntity:
+id: Long
+documentId: Long
+pageIndex: Int
+createdAt: Long
+
+ScanSessionEntity:
+id: Long
+status: String
+createdAt: Long
+updatedAt: Long
+
+ScanPageEntity:
+id: Long
+sessionId: Long
+imageUri: String
+pageIndex: Int
+filter: String
+rotation: Int
+
+CollectionEntity:
+id: Long
+name: String
+createdAt: Long
+
+Include:
+- DAO
+- Foreign keys
+- Indices
+- Repository implementations
+- Transactions
+- Database migrations
+- Flow queries
+
+Do not use destructive migrations in production.
+
+==================================================
+P. SETTINGS AND PREFERENCES
+==================================================
+
+Use DataStore.
+
+Settings:
+- Light/Dark/System theme
+- Default PDF display mode
+- Default scan filter
+- Default export resolution
+- OCR preferences
+- Cache clearing
+- Export destination preferences
+- Language preference
+- About
+- Privacy policy
+- Licenses
+
+Provide confirmation for cache deletion.
+
+Keep user documents separate from temporary cache.
+
+==================================================
+Q. SECURITY & PRIVACY
+==================================================
+
+Apply:
+- Offline-first processing
+- Minimal Android permissions
+- No unnecessary internet permission
+- No document analytics upload
+- No embedded secrets
+- Validate URI schemes
+- Safe cache handling
+- Private temporary directories
+- Safe document sharing
+- Runtime permission best practices
+- Keystore when sensitive cryptographic keys must be stored
+- Proper encrypted PDF handling
+- Password input masking
+- Robust file validation
+
+Do not store PDF passwords in plaintext.
+
+Do not use broad storage permissions as a shortcut.
+
+Support Android scoped storage.
+
+==================================================
+R. PERFORMANCE
+==================================================
+
+Optimize for:
+- Large PDFs
+- Limited RAM
+- High-resolution scans
+- Background OCR
+- Long-running PDF conversion
+- Smooth scrolling
+- Battery efficiency
+
+Use:
+- Dispatchers.IO / Default appropriately
+- LazyColumn
+- Bitmap downsampling
+- LRU cache
+- Lifecycle-aware collection
+- WorkManager when suitable
+- Cancellable processing
+- Progress UI
+- Memory-safe image processing
+- Resource disposal
+
+Never perform blocking file conversion on the main thread.
+
+==================================================
+S. BUILD CONFIGURATION
+==================================================
+
+Use:
+Gradle Kotlin DSL
+
+Application ID:
+com.pdfstudiopro.app
+
+Application Label:
+PDF Studio Pro
+
+Version Name:
+1.0.0
+
+Version Code:
+1
+
+minSdk:
+Choose a justified compatible value, preferably API 26+ if supported by selected dependencies and product needs.
+
+compileSdk/targetSdk:
+Use currently compatible, supported Android SDK versions and meet current Google Play requirements.
+
+Enable:
+- Kotlin
+- Compose
+- Java/Kotlin compatibility
+- R8 minification for release
+- Resource shrinking where safe
+- Version catalog
+- Hilt
+- Room processing
+- Core library desugaring only if needed
+
+Provide:
+- settings.gradle.kts
+- root build.gradle.kts
+- app/build.gradle.kts
+- libs.versions.toml
+- gradle.properties
+- AndroidManifest.xml
+- proguard-rules.pro
+- required resources
+- Gradle wrapper configuration
+
+Verify dependencies resolve.
+
+==================================================
+T. BUILD APK AND AAB
+==================================================
+
+Provide exact working commands:
+
+Linux/macOS:
+./gradlew :app:assembleDebug
+./gradlew :app:assembleRelease
+./gradlew :app:bundleRelease
+
+Windows:
+gradlew.bat :app:assembleDebug
+gradlew.bat :app:assembleRelease
+gradlew.bat :app:bundleRelease
+
+Explain expected standard output paths:
+app/build/outputs/apk/debug/
+app/build/outputs/apk/release/
+app/build/outputs/bundle/release/
+
+Explain:
+- Debug APK installation
+- Release signing configuration
+- Keystore generation
+- Keystore password protection
+- APK versus AAB
+- Android Studio build process
+- Installing APK on device
+- Validation of signatures
+
+Never include real signing secrets in source code.
+
+Do not claim release APK is signed unless signing is configured and verified.
+
+==================================================
+U. TESTING REQUIREMENTS
+==================================================
+
+Implement tests for:
+
+Unit:
+- ViewModels
+- Use cases
+- Repository behavior
+- Metadata parsing
+- Page range validation
+
+Integration:
+- Room Database
+- PDF operations
+- Document URI handling
+- OCR processing integration
+
+UI:
+- Navigation
+- Dashboard
+- PDF selection
+- Scanner flow
+- Settings
+- Error messages
+
+Test scenarios:
+- Empty document list
+- Missing file
+- Corrupt PDF
+- Large PDF
+- Password PDF
+- OCR failure
+- Camera permission denied
+- File permission revoked
+- Low storage
+- Process death
+- Device rotation
+- Dark mode
+- Tablet layout
+
+Report which tests actually ran and which could not be executed.
+
+==================================================
+V. IMPLEMENTATION PHASES
+==================================================
+
+PHASE 1 — PROJECT FOUNDATION
+Build:
+- Full Gradle project
+- Application class
+- MainActivity
+- Hilt setup
+- Material 3 theme
+- Navigation
+- Base components
+- Splash and onboarding
+
+PHASE 2 — DASHBOARD
+Build:
+- Home screen
+- Quick actions
+- Document cards
+- Recent documents
+- Empty states
+
+PHASE 3 — DOCUMENT MANAGEMENT
+Build:
+- Room
+- SAF integration
+- Document repository
+- File operations
+- Search and sort
+
+PHASE 4 — PDF READER
+Build:
+- Rendering
+- Zoom
+- Page navigation
+- Bookmarks
+- History
+- Share and print
+
+PHASE 5 — SCANNER
+Build:
+- CameraX
+- Image capture
+- Crop editor
+- Filters
+- Multi-page PDF export
+
+PHASE 6 — OCR
+Build:
+- Text recognition
+- OCR editor
+- TXT export
+- OCR error handling
+
+PHASE 7 — PDF TOOLS
+Build:
+- Merge
+- Split
+- Compress
+- Convert
+- Page manipulation
+- Watermark
+- PDF protection
+
+PHASE 8 — POLISH
+Build:
+- Responsive layouts
+- Dark theme
+- Animations
+- Accessibility
+- Settings
+- Security
+- Performance optimization
+
+PHASE 9 — QA AND DISTRIBUTION
+Provide:
+- Unit tests
+- Integration tests
+- UI tests
+- Build validation
+- Debug APK instructions
+- Release APK signing
+- AAB build instructions
+- Final README
+
+==================================================
+W. STRICT OUTPUT RULES
+==================================================
+
+CRITICAL REQUIREMENTS:
+
+1. Generate real Kotlin source code.
+2. Provide actual path for every file.
+3. Include package declarations.
+4. Include all required imports.
+5. Do not use pseudocode.
+6. Do not leave TODO implementations in delivered features.
+7. Do not implement decorative buttons without actions.
+8. No fake file operations.
+9. No fake scanner camera.
+10. No fake PDF viewer.
+11. No fabricated library APIs.
+12. No incompatible dependency combinations.
+13. Keep all ViewModel states lifecycle-safe.
+14. Write reusable Composable components.
+15. Use proper error handling.
+16. Use structured coroutine concurrency.
+17. Respect Android permission restrictions.
+18. Implement meaningful loading and failure states.
+19. Provide accessibility support.
+20. Include reproducible build instructions.
+
+For each implementation phase, output:
+A. Goal
+B. Files created or modified
+C. Complete source code
+D. Integration instructions
+E. Tests
+F. Build verification status
+G. Known limitations
+H. Next phase
+
+When a coding workspace is accessible:
+Create files directly in the project directory, use the actual build tools, resolve compilation errors, and run relevant tests.
+
+When a coding workspace is unavailable:
+Output complete source files in manageable sequential batches. Never claim they were physically created or compiled.
+
+If a response becomes too long, split into labeled parts with no missing dependencies.
+
+==================================================
+X. DEFINITION OF DONE
+==================================================
+
+A feature is complete only when:
+- UI exists
+- Navigation works
+- Logic is implemented
+- Actual document operation works
+- Permissions are handled
+- Loading and error states exist
+- Results can be saved or exported
+- Relevant tests are provided
+- No known blocking compile errors remain
+
+The overall application is complete only after build and validation requirements are satisfied.
+
+==================================================
+FINAL COMMAND
+==================================================
+
+START IMPLEMENTATION NOW.
+
+First:
+1. Verify library choices and architectural compatibility.
+2. Present the project structure and implementation roadmap.
+3. Generate the complete Android Studio project foundation.
+4. Continue into functional modules in dependency order.
+5. Generate every required file.
+6. Build and test if tools are available.
+7. Explain all limitations honestly.
+8. Provide verified APK/AAB artifacts only if actually built.
+
+Use the Premium Navy Blue & Teal design system consistently.
+
+The final result must be a professional, elegant, secure, responsive, production-oriented Android application named PDF Studio Pro.

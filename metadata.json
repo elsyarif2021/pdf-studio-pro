@@ -1,0 +1,6 @@
+{
+  "name": "PDF Studio Pro",
+  "description": "Professional PDF reader, smart document scanner, OCR, PDF tools and document workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
